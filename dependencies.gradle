@@ -1,0 +1,46 @@
+allprojects {
+
+}
+
+ext {
+    //Android
+    androidBuildToolsVersion = "26.0.2"
+    androidMinSdkVersion = 15
+    androidTargetSdkVersion = 27
+    androidCompileSdkVersion = 27
+
+    //Libraries
+    multidexVersion = '1.0.1'
+    androidSupportLibraryVersion = '27.1.1'
+    retrofitVersion = '2.4.0'
+    rxVersion = '2.1.12'
+    rxAndroidVersion = '2.0.2'
+    okhttp3Version = '3.10.0'
+
+    //Testing
+    jUnitVersion = '4.12'
+    supportTestRunnerVersion = '1.0.1'
+    epressoVersion = '3.0.1'
+
+    dependencies = [
+            kotlinStdLib          : "org.jetbrains.kotlin:kotlin-stdlib-jre7:${kotlin_version}",
+            supportAppcompat      : "com.android.support:appcompat-v7:${androidSupportLibraryVersion}",
+            retrofit              : "com.squareup.retrofit2:retrofit:${retrofitVersion}",
+            retrofit2RxAdapter    : "com.squareup.retrofit2:adapter-rxjava:${retrofitVersion}",
+            retrofitGson          : "com.squareup.retrofit2:converter-gson:${retrofitVersion}",
+            rxAndroid2            : "io.reactivex.rxjava2:rxandroid:${rxAndroidVersion}",
+            rxJava2               : "io.reactivex.rxjava2:rxjava:${rxVersion}",
+            loggingInterceptor    : "com.squareup.okhttp3:logging-interceptor:${okhttp3Version}",
+            squareOkhttp          : "com.squareup.okhttp3:okhttp:${okhttp3Version}",
+    ]
+
+    testDependencies = [
+            jUnit: "junit:junit:${jUnitVersion}"
+    ]
+
+    androidTestDependencies = [
+            annotations: "com.android.support:support-annotations:${androidSupportLibraryVersion}",
+            supportTestRunner: "com.android.support.test:runner:${supportTestRunnerVersion}",
+            epressoCore: "com.android.support.test.espresso:espresso-core:${epressoVersion}"
+    ]
+}
